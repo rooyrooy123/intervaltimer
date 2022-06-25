@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <link rel="stylesheet" href="style.css"> 
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>るーいのインターバルタイマー</title>
+        <meta name="description" content="最大3回まで設定可能なインターバルタイマー。切り替え時にチャイムまたは自身が設定した次の時間の内容を音声で伝えます。" />
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <br> <!--インターバル1-->
+        <div class="center"><span id="interval1time" class="center">Interval: 1 ⇒--:--:--</span>
+        <br>予定(記入するとチャイムの代わりに予定を読みあげてくれます。):「この時間は<input type="text" id="sound1">をする時間です」</div>
+        <br>
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-hour" class="timer-range" class="timer-hour" min="0" max="5" step="1" value="0">
+        <span id="show-hour" class="show-time" ></span></div>
+        <br>
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-minute" class="timer-range" class="timer-minute" min="0" max="59" step="1" value="0">
+        <span id="show-minute" class="show-time" ></span></div>
+        <br>
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-second" class="timer-range" class="timer-second" min="0" max="59" step="1" value="0">
+        <span id="show-second" class="show-second" class="show-time" ></span></div>
+        
+        
+        <!--インターバル2-->
+        <div class="center"><span id="interval2time" class="center">Interval: 2 ⇒--:--:--</span>   
+        <br>予定(記入するとチャイムの代わりに予定を読みあげてくれます。):「この時間は<input type="text" id="sound2">をする時間です」</div>
+        <br>
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-hour2" class="timer-range" class="timer-hour" min="0" max="5" step="1" value="0">
+        <span id="show-hour2" class="show-time" ></span></div>
+        <br>
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-minute2" class="timer-range" class="timer-minute" min="0" max="59" step="1" value="0">
+        <span id="show-minute2" class="show-time" ></span></div>
+        <br>
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-second2" class="timer-range" class="timer-second" min="0" max="59" step="1" value="0">
+        <span id="show-second2" class="show-second" class="show-time" ></span></div>
+        
+        <!--インターバル3-->
+
+        <div class="center"><span id="interval3time" class="center">Interval: 3 ⇒--:--:--</span>   
+        <br>予定(記入するとチャイムの代わりに予定を読みあげてくれます。):「この時間は<input type="text" id="sound3">をする時間です」</div>
+        <br>
+
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-hour3" class="timer-range" class="timer-hour" min="0" max="5" step="1" value="0">
+        <span id="show-hour3" class="show-time" ></span></div>
+        <br>
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-minute3" class="timer-range" class="timer-minute" min="0" max="59" step="1" value="0">
+        <span id="show-minute3" class="show-time" ></span></div>
+        <br>
+        <div class="center" class="flex"><input type ="range" name="timer-range" id="timer-second3" class="timer-range" class="timer-second" min="0" max="59" step="1" value="0">
+        <span id="show-second3" class="show-second" class="show-time" ></span></div>
+        <!--タイム表示-->
+        <h1><div class="center"><span id= "showtimer" class="showtimer"></span> </div></h1>
+        <br>
+        <div class="center"><!--ボタン-->
+            <input type="button" class="center" value="インターバルタイマー 開始" id="starttimer" onclick="starttimer()">
+            <div class="hidden" id="btn-hidden"> <!--ここから読み込み時非表示にするボタン-->
+                <input type="button" class="center" value="インターバルタイマー 一時停止" id="restarttimer" onclick="restarttimer()">
+                <input type="button" class="center" value="今のインターバルをスキップ" id="skipinterval" onclick="skipinterval()">
+            </div>
+            <br><br>
+        </div>
+        <div class="center">このサイトはOtoLogicを利用しています。</div>
+    </body>
+    
+</html>

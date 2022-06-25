@@ -1,0 +1,27 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+
+.flex{
+    display: flex;
+}
+.timer-range{
+    width: 80%;
+}
+.center{
+    text-align: center;
+}
+#interval1time, #interval2time, #interval3time{
+    font-weight: bold;
+    font-size: large;
+    transition: all 0.5s 0 ease;
+
+}
+
+.hidden{
+    display:none;
+}
+.show{
+    display: block;
+}
